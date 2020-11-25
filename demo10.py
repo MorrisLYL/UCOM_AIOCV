@@ -1,6 +1,5 @@
 import cv2
 import math
-
 path = 'images/bg.jpeg'
 image = cv2.imread(path, -1)
 # 複製保留原圖
@@ -29,6 +28,9 @@ cv2.setMouseCallback(main, drawCircle)
 
 k = 0
 while k != 27:  # 27=esc鍵
+    # font_path = "fonts/NotoSansCJKtc-Light.otf"
+    # font = ImageFont.truetype(font_path, 36)
+
     cv2.imshow(main, image)
     cv2.putText(image, "left click, and drag", (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 0), 2)
